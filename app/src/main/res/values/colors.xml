@@ -76,6 +76,8 @@
     <color name="line_state_true">#262626</color>
 
     <color name="bottom_item">#f7941d</color>
+    
+    <color name="divide_line">#aaaaaa</color>
 
 
 </resources>

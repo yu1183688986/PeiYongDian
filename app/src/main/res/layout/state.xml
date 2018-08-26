@@ -1,6 +1,345 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/guozai_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_guozai_24dp" />
+
+        <TextView
+            android:id="@+id/guozai_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="过载"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guozai_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/guozai_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:text="2121"
+            app:layout_constraintBottom_toBottomOf="@+id/guozai_click"
+            app:layout_constraintEnd_toStartOf="@+id/guozai_click"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/guozai_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            style="@style/ClickableImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/chongzai_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chongzai_24dp" />
+
+        <TextView
+            android:id="@+id/chongzai_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="重载"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chongzai_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chongzai_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:text="653"
+            app:layout_constraintBottom_toBottomOf="@+id/chongzai_click"
+            app:layout_constraintEnd_toStartOf="@+id/chongzai_click"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chongzai_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            style="@style/ClickableImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/bupingheng_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_bupingheng_24dp" />
+
+        <TextView
+            android:id="@+id/bupingheng_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="不平衡"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bupingheng_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bupingheng_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:text="1363"
+            app:layout_constraintBottom_toBottomOf="@+id/bupingheng_click"
+            app:layout_constraintEnd_toStartOf="@+id/bupingheng_click"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bupingheng_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            style="@style/ClickableImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/guodianya_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_guodianya_24dp" />
+
+        <TextView
+            android:id="@+id/guodianya_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="过电压"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guodianya_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/guodianya_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:text="1234"
+            app:layout_constraintBottom_toBottomOf="@+id/guodianya_click"
+            app:layout_constraintEnd_toStartOf="@+id/guodianya_click"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/guodianya_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            style="@style/ClickableImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/qiandianya_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_qiandianya_24dp" />
+
+        <TextView
+            android:id="@+id/qiandianya_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="欠电压"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/qiandianya_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/qiandianya_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:text="653"
+            app:layout_constraintBottom_toBottomOf="@+id/qiandianya_click"
+            app:layout_constraintEnd_toStartOf="@+id/qiandianya_click"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/qiandianya_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            style="@style/ClickableImageView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line" />
+</LinearLayout>

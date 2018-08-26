@@ -15,6 +15,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Description;
@@ -38,6 +39,7 @@ import com.study.yuyong.peiyongdian.utils.MyValueFormatter;
 import com.study.yuyong.peiyongdian.utils.XYMarkerView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Line_state_Monitor_Fragment extends Fragment implements OnChartValueSelectedListener{
@@ -50,14 +52,36 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
     private YAxis leftAxis,rightAxis;
     //数据集合
     ArrayList<BarEntry> yVals1;
+    private ViewHolder holder;
+
+    class ViewHolder{
+        TextView guozai;
+        TextView chongzai;
+        TextView bupingheng;
+        TextView guodianya;
+        TextView qiandianya;
+        List<TextView> state = new ArrayList<>();
+        public ViewHolder(View view){
+            guozai = view.findViewById(R.id.guozai_num);
+            state.add(guozai);
+            chongzai = view.findViewById(R.id.chongzai_num);
+            state.add(chongzai);
+            bupingheng = view.findViewById(R.id.bupingheng_num);
+            state.add(bupingheng);
+            guodianya = view.findViewById(R.id.guodianya_num);
+            state.add(guodianya);
+            qiandianya = view.findViewById(R.id.qiandianya_num);
+            state.add(qiandianya);
+        }
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.line_state_monitor_fragment,container,false);
 
-
         mBarChart = view.findViewById(R.id.mBarChart);
+        holder = new ViewHolder(view);
         initView();
         //开启刷新功能
         swipeRefresh = view.findViewById(R.id.swipe_refresh_1);
@@ -66,6 +90,7 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
             @Override
             public void onRefresh() {
                 //模拟服务器请求数据
+                final List<Integer> list = new ArrayList();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -76,6 +101,7 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
                         Max_value = 100;
                         for (int i=1; i<6;i++){
                             int value = random.nextInt(100);
+                            list.add(value);
                             yVals1.add(new BarEntry(i,value));
                         }
                         try {
@@ -91,9 +117,12 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
                                 rightAxis.setAxisMaximum(Max_value);
                                 setData(yVals1);
                                 mBarChart.setNoDataText("正在加载数据...");
-                                mBarChart.animateXY(3000, 3000);
+                                mBarChart.animateXY(1000, 1000);
                                 mBarChart.invalidate();
                                 swipeRefresh.setRefreshing(false);
+                                for (int i=0;i<list.size();i++){
+                                    holder.state.get(i).setText(String.valueOf(list.get(i)));
+                                }
                             }
                         });
                     }
@@ -207,6 +236,11 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
         yVals1.add(new BarEntry(3, 30));
         yVals1.add(new BarEntry(4, 40));
         yVals1.add(new BarEntry(5, 33));
+        holder.guozai.setText("10");
+        holder.chongzai.setText("20");
+        holder.bupingheng.setText("30");
+        holder.guodianya.setText("40");
+        holder.qiandianya.setText("33");
 
         setData(yVals1);
     }
