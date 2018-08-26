@@ -7,5 +7,20 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="FruitActivityTheme" parent="AppTheme">
+
+    </style>
+
+    <style name="ClickableTextView">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    <!--TabLayout字体样式-->
+    <style name="TabTextSize" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="TabTextSize_1" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">18sp</item>
+    </style>
 
 </resources>

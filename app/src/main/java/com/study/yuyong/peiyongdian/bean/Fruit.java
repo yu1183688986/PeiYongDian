@@ -1,4 +1,4 @@
-package com.study.yuyong.materialdesign;
+package com.study.yuyong.peiyongdian.bean;
 /**
  * @date on 11:30 2018/7/31
  * @author yuyong
