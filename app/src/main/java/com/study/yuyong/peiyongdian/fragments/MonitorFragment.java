@@ -5,8 +5,6 @@ package com.study.yuyong.peiyongdian.fragments;
  * @Email yu1183688986@163.com
  * @describe 监控按钮对应的碎片
  */
-import android.content.Context;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -22,7 +20,6 @@ import com.study.yuyong.peiyongdian.adapter.MonitorFragmentAdapter;
 import com.study.yuyong.peiyongdian.utils.MyApplication;
 import com.study.yuyong.peiyongdian.utils.NoScrollViewPager;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
