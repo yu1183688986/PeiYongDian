@@ -56,22 +56,22 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
 
     class ViewHolder{
         TextView guozai;
-        TextView chongzai;
-        TextView bupingheng;
-        TextView guodianya;
-        TextView qiandianya;
+        TextView zhongzai;
+        TextView qingzai;
+        TextView kongzai;
+        TextView zhengchang;
         List<TextView> state = new ArrayList<>();
-        public ViewHolder(View view){
+        ViewHolder(View view){
             guozai = view.findViewById(R.id.guozai_num);
             state.add(guozai);
-            chongzai = view.findViewById(R.id.chongzai_num);
-            state.add(chongzai);
-            bupingheng = view.findViewById(R.id.bupingheng_num);
-            state.add(bupingheng);
-            guodianya = view.findViewById(R.id.guodianya_num);
-            state.add(guodianya);
-            qiandianya = view.findViewById(R.id.qiandianya_num);
-            state.add(qiandianya);
+            zhongzai = view.findViewById(R.id.zhongzai_num);
+            state.add(zhongzai);
+            qingzai = view.findViewById(R.id.qingzai_num);
+            state.add(qingzai);
+            kongzai = view.findViewById(R.id.kongzai_num);
+            state.add(kongzai);
+            zhengchang = view.findViewById(R.id.zhengchang_num);
+            state.add(zhengchang);
         }
     }
 
@@ -90,7 +90,7 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
             @Override
             public void onRefresh() {
                 //模拟服务器请求数据
-                final List<Integer> list = new ArrayList();
+                final List<Integer> list = new ArrayList<>();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -168,7 +168,7 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
      */
 
     private void paintXY(){
-        IAxisValueFormatter xAxisFormatter = new MyAxisValueFormatter(mBarChart);
+        IAxisValueFormatter xAxisFormatter = new MyAxisValueFormatter(mBarChart,"line");
         XAxis xAxis = mBarChart.getXAxis();
         //设置x轴的数据格式器
         xAxis.setValueFormatter(xAxisFormatter);
@@ -237,10 +237,10 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
         yVals1.add(new BarEntry(4, 40));
         yVals1.add(new BarEntry(5, 33));
         holder.guozai.setText("10");
-        holder.chongzai.setText("20");
-        holder.bupingheng.setText("30");
-        holder.guodianya.setText("40");
-        holder.qiandianya.setText("33");
+        holder.zhongzai.setText("20");
+        holder.qingzai.setText("30");
+        holder.kongzai.setText("40");
+        holder.zhengchang.setText("33");
 
         setData(yVals1);
     }
@@ -249,7 +249,7 @@ public class Line_state_Monitor_Fragment extends Fragment implements OnChartValu
      * 设置数据
      * @param yVals1
      */
-    private void setData(ArrayList yVals1) {
+    private void setData(ArrayList<BarEntry> yVals1) {
         float start = 1f;
         BarDataSet set1;
         if (mBarChart.getData() != null &&

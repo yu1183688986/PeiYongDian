@@ -27,5 +27,13 @@
         <item name="android:clickable">true</item>
         <item name="android:background">?android:selectableItemBackground</item>
     </style>
+    <style name="ClickableLayout">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+<!--toolBar按钮的颜色-->
+    <style name="toolBar">
+        <item name="colorControlNormal">#030405</item>
+    </style>
 
 </resources>

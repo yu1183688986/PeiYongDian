@@ -67,7 +67,7 @@ public class Realtime_state_Fragment_1 extends Fragment{
             if(i==0){
                 mFragments.add(new Line_state_Monitor_Fragment());
             }else if(i==1){
-                mFragments.add(new Historical_state_Fragment());
+                mFragments.add(new Peibian_state_Monitor_Fragment());
             }
         }
         //getSupportFragmentManager()是Activity嵌套fragment时使用

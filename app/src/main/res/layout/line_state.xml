@@ -13,8 +13,10 @@
         android:background="@color/divide_line" />
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/guozai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/ClickableLayout"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
         android:paddingTop="5dp">
@@ -25,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="16dp"
-            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -52,8 +54,8 @@
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="5dp"
-            android:paddingRight="10dp"
-            android:text="2121"
+            android:paddingEnd="10dp"
+            tools:text="2121"
             app:layout_constraintBottom_toBottomOf="@+id/guozai_click"
             app:layout_constraintEnd_toStartOf="@+id/guozai_click"
             app:layout_constraintTop_toTopOf="parent" />
@@ -66,7 +68,6 @@
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
-            style="@style/ClickableImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -79,6 +80,8 @@
         android:layout_height="1dp"
         android:background="@color/divide_line" />
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/zhongzai"
+        style="@style/ClickableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
@@ -86,7 +89,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/chongzai_img"
+            android:id="@+id/zhongzai_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -96,10 +99,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_chongzai_24dp" />
+            app:srcCompat="@drawable/ic_zhongzai_24dp" />
 
         <TextView
-            android:id="@+id/chongzai_text"
+            android:id="@+id/zhongzai_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -109,31 +112,30 @@
             android:text="重载"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/chongzai_img"
+            app:layout_constraintStart_toEndOf="@+id/zhongzai_img"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/chongzai_num"
+            android:id="@+id/zhongzai_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="5dp"
             android:paddingRight="10dp"
-            android:text="653"
-            app:layout_constraintBottom_toBottomOf="@+id/chongzai_click"
-            app:layout_constraintEnd_toStartOf="@+id/chongzai_click"
+            tools:text="653"
+            app:layout_constraintBottom_toBottomOf="@+id/zhongzai_click"
+            app:layout_constraintEnd_toStartOf="@+id/zhongzai_click"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/chongzai_click"
+            android:id="@+id/zhongzai_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
-            style="@style/ClickableImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -145,6 +147,8 @@
         android:layout_height="1dp"
         android:background="@color/divide_line" />
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/qingzai"
+        style="@style/ClickableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
@@ -152,7 +156,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/bupingheng_img"
+            android:id="@+id/qingzai_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -162,44 +166,43 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_bupingheng_24dp" />
+            app:srcCompat="@drawable/ic_qingzai_24dp" />
 
         <TextView
-            android:id="@+id/bupingheng_text"
+            android:id="@+id/qingzai_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
-            android:text="不平衡"
+            android:text="轻载"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/bupingheng_img"
+            app:layout_constraintStart_toEndOf="@+id/qingzai_img"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/bupingheng_num"
+            android:id="@+id/qingzai_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="5dp"
             android:paddingRight="10dp"
-            android:text="1363"
-            app:layout_constraintBottom_toBottomOf="@+id/bupingheng_click"
-            app:layout_constraintEnd_toStartOf="@+id/bupingheng_click"
+            tools:text="1363"
+            app:layout_constraintBottom_toBottomOf="@+id/qingzai_click"
+            app:layout_constraintEnd_toStartOf="@+id/qingzai_click"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/bupingheng_click"
+            android:id="@+id/qingzai_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
-            style="@style/ClickableImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -211,6 +214,8 @@
         android:layout_height="1dp"
         android:background="@color/divide_line" />
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/kongzai"
+        style="@style/ClickableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
@@ -218,7 +223,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/guodianya_img"
+            android:id="@+id/kongzai_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -228,44 +233,43 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_guodianya_24dp" />
+            app:srcCompat="@drawable/ic_kongzai_24dp" />
 
         <TextView
-            android:id="@+id/guodianya_text"
+            android:id="@+id/kongzai_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
-            android:text="过电压"
+            android:text="空载"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/guodianya_img"
+            app:layout_constraintStart_toEndOf="@+id/kongzai_img"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/guodianya_num"
+            android:id="@+id/kongzai_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="5dp"
             android:paddingRight="10dp"
-            android:text="1234"
-            app:layout_constraintBottom_toBottomOf="@+id/guodianya_click"
-            app:layout_constraintEnd_toStartOf="@+id/guodianya_click"
+            tools:text="1234"
+            app:layout_constraintBottom_toBottomOf="@+id/kongzai_click"
+            app:layout_constraintEnd_toStartOf="@+id/kongzai_click"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/guodianya_click"
+            android:id="@+id/kongzai_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
-            style="@style/ClickableImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -277,6 +281,8 @@
         android:layout_height="1dp"
         android:background="@color/divide_line" />
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/zhengchang"
+        style="@style/ClickableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
@@ -284,7 +290,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/qiandianya_img"
+            android:id="@+id/zhengchang_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -294,44 +300,43 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_qiandianya_24dp" />
+            app:srcCompat="@drawable/ic_zhengchang_24dp" />
 
         <TextView
-            android:id="@+id/qiandianya_text"
+            android:id="@+id/zhengchang_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
-            android:text="欠电压"
+            android:text="正常"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/qiandianya_img"
+            app:layout_constraintStart_toEndOf="@+id/zhengchang_img"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/qiandianya_num"
+            android:id="@+id/zhengchang_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="24dp"
             android:layout_marginTop="5dp"
             android:paddingRight="10dp"
-            android:text="653"
-            app:layout_constraintBottom_toBottomOf="@+id/qiandianya_click"
-            app:layout_constraintEnd_toStartOf="@+id/qiandianya_click"
+            tools:text="653"
+            app:layout_constraintBottom_toBottomOf="@+id/zhengchang_click"
+            app:layout_constraintEnd_toStartOf="@+id/zhengchang_click"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/qiandianya_click"
+            android:id="@+id/zhengchang_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
-            style="@style/ClickableImageView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

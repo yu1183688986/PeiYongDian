@@ -15,15 +15,23 @@ import java.util.List;
 public class MyAxisValueFormatter implements IAxisValueFormatter {
 
     private BarLineChartBase<?> chart;
-    private List<String> list = new ArrayList();
+    private List<String> list = new ArrayList<>();
 
-    public MyAxisValueFormatter(BarLineChartBase<?> chart) {
+    public MyAxisValueFormatter(BarLineChartBase<?> chart,String name) {
         this.chart = chart;
-        list.add("过载");
-        list.add("重载");
-        list.add("不平衡");
-        list.add("过电压");
-        list.add("欠电压");
+        if ("line".equals(name)){
+            list.add("过载");
+            list.add("重载");
+            list.add("轻载");
+            list.add("空载");
+            list.add("正常");
+        }else if ("peibian".equals(name)){
+            list.add("过载");
+            list.add("重载");
+            list.add("不平衡");
+            list.add("过电压");
+            list.add("低电压");
+        }
     }
     @Override
     public String getFormattedValue(float value, AxisBase axis) {
