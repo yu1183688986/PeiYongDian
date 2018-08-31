@@ -35,7 +35,7 @@
                 android:orientation="vertical">
                 <fragment
                     android:id="@+id/bar_chart"
-                    android:name="com.study.yuyong.peiyongdian.fragments.Realtime_state_Fragment"
+                    android:name="com.sg.xjec.e800.peiyongdian.fragments.Realtime_state_Fragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </LinearLayout>
@@ -59,7 +59,7 @@
                 android:orientation="vertical">
                 <fragment
                     android:id="@+id/line_chart"
-                    android:name="com.study.yuyong.peiyongdian.fragments.Historical_state_Fragment"
+                    android:name="com.sg.xjec.e800.peiyongdian.fragments.Historical_state_Fragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </LinearLayout>

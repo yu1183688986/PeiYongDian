@@ -36,6 +36,7 @@
     <color name="deep_red">#dc3b1f</color>
     <color name="while_most_color">#e4e4e4</color>
     <color name="title_black">#222222</color>
+    <color name="title_green">#299fc5</color>
     <color name="grey_search">#FF999999</color>
 
     <color name="White">#FFFFFF</color>
@@ -78,6 +79,8 @@
     <color name="bottom_item">#f7941d</color>
     
     <color name="divide_line">#aaaaaa</color>
+
+    <color name="jiankong_bar">#238fb3</color>
 
 
 </resources>

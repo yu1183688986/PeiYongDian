@@ -26,13 +26,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
-                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
                     app:layout_scrollFlags="scroll|enterAlways|snap"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                    app:theme="@style/AppTheme"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
             </android.support.design.widget.AppBarLayout>
 
             <!--ViewPaper与底栏导航按钮联动-->
-            <com.study.yuyong.peiyongdian.utils.NoScrollViewPager
+            <com.sg.xjec.e800.peiyongdian.utils.NoScrollViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_gravity="center_vertical"
@@ -52,7 +53,7 @@
             app:elevation="16dp"
             app:itemIconTint="@drawable/nav_item_color_state"
             app:itemTextColor="@drawable/nav_item_color_state"
-            app:layout_behavior="com.study.yuyong.peiyongdian.behaviors.BottomNavigationBehavior"
+            app:layout_behavior="com.sg.xjec.e800.peiyongdian.behaviors.BottomNavigationBehavior"
             app:menu="@menu/bottom_navigation" />
 
         <!--悬浮按钮-->

@@ -4,8 +4,13 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/Black</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--按钮颜色-->
+        <item name="colorControlNormal">@color/White</item>
+        <!--文字颜色-->
+        <item name="android:textColorPrimary">@color/White</item>
+
     </style>
     <style name="FruitActivityTheme" parent="AppTheme">
 
@@ -33,7 +38,11 @@
     </style>
 <!--toolBar按钮的颜色-->
     <style name="toolBar">
+        <!--按钮颜色-->
         <item name="colorControlNormal">#030405</item>
+        <!--文字颜色-->
+        <item name="android:textColorPrimary">@color/White</item>
     </style>
+
 
 </resources>

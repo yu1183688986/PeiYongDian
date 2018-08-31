@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.study.yuyong.peiyongdian">
+    package="com.sg.xjec.e800.peiyongdian">
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name="com.study.yuyong.peiyongdian.utils.MyApplication"
+        android:name="com.sg.xjec.e800.peiyongdian.utils.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/nav_icon1"
         android:label="配电"
